@@ -3,12 +3,13 @@ const passport = require("passport");
 
 ///OAuth login
 router.get("/login", (req, res) => {
-  res.render("login");
+  res.render("login", { user: req.user });
 });
 
 ///OAuth logout
 router.get("/logout", (req, res) => {
-  res.send("logging out");
+  req.logOut();
+  res.redirect("/");
 });
 
 ///OAuth with google
@@ -21,7 +22,8 @@ router.get(
 
 ///callback route for googel ro redirect to
 router.get("/google/redirect", passport.authenticate("google"), (req, res) => {
-  res.send("You reached a call back URI");
+  //res.send(req.user);
+  res.redirect("/profile/");
 });
 
 module.exports = router;

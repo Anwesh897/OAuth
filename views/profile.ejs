@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Login page</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>OAuth</title>
     <style>
       body {
         font-family: arial;
@@ -39,13 +40,6 @@
         padding: 0 10px;
         color: #333;
       }
-      .google-btn {
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 10px;
-        background: #ff5353;
-      }
     </style>
   </head>
   <body>
@@ -61,10 +55,15 @@
       </ul>
     </nav>
     <header>
-      <h1>Login using...</h1>
+      <h1>
+        Welcome to your profile <%= user %>
+      </h1>
     </header>
     <main>
-      <a href="/auth/google" class="google-btn">Google+</a>
+      <h3>Do not go gentle into that good night</h3>
+      <p>
+        extra information
+      </p>
     </main>
   </body>
 </html>
